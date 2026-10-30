@@ -1,0 +1,55 @@
+/* 91.3 Ayclt FM — AzuraCast admin theme
+   Base import requested by the station owner. Jellyfin selectors may not
+   match AzuraCast; test carefully before applying to a live admin instance.
+*/
+@import url("https://913aycltfm.github.io/jellyfin-netflix-theme/jellyfin-netflix-theme.css");
+
+:root {
+  --ayclt-red: #e32636;
+  --ayclt-red-dark: #b7192b;
+  --ayclt-black: #101114;
+  --ayclt-panel: #191b20;
+  --ayclt-panel-2: #22252b;
+  --ayclt-white: #fff;
+  --ayclt-muted: #a8abb3;
+  --ayclt-border: rgba(255,255,255,.10);
+}
+
+/* Keep text and controls readable; avoid changing semantic status colors. */
+html, body {
+  background: var(--ayclt-black) !important;
+  color: var(--ayclt-white) !important;
+}
+a { color: #ff5968; }
+a:hover, a:focus { color: #fff; }
+
+.sidebar, .navbar, .topbar, .card, .panel, .modal-content,
+.dropdown-menu, .list-group-item, .table, table,
+.form-control, .form-select {
+  border-color: var(--ayclt-border) !important;
+}
+.sidebar, .navbar, .topbar { background-color: var(--ayclt-panel) !important; }
+.card, .panel, .modal-content, .dropdown-menu, .list-group-item {
+  background-color: var(--ayclt-panel) !important;
+  color: var(--ayclt-white) !important;
+}
+.table, table { color: var(--ayclt-white) !important; }
+.table th, table th { background: var(--ayclt-panel-2) !important; }
+.form-control, .form-select, input, select, textarea {
+  background: #15171b !important;
+  color: #fff !important;
+}
+.btn-primary {
+  background: var(--ayclt-red) !important;
+  border-color: var(--ayclt-red) !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background: var(--ayclt-red-dark) !important;
+  border-color: var(--ayclt-red-dark) !important;
+}
+:focus-visible {
+  outline: 2px solid #ff5968 !important;
+  outline-offset: 2px;
+}
+.text-muted, .form-text, .help-block { color: var(--ayclt-muted) !important; }
