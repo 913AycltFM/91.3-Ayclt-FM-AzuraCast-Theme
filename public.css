@@ -1,0 +1,63 @@
+/* 91.3 Ayclt FM — AzuraCast public-page theme
+   Base import requested by the station owner. Jellyfin selectors may not
+   match AzuraCast; the rules below provide AzuraCast-oriented overrides.
+*/
+@import url("https://913aycltfm.github.io/jellyfin-netflix-theme/jellyfin-netflix-theme.css");
+
+:root {
+  --ayclt-red: #e32636;
+  --ayclt-red-dark: #b7192b;
+  --ayclt-black: #101114;
+  --ayclt-panel: #191b20;
+  --ayclt-panel-2: #22252b;
+  --ayclt-white: #fff;
+  --ayclt-muted: #a8abb3;
+  --ayclt-border: rgba(255,255,255,.10);
+}
+
+body {
+  background: var(--ayclt-black) !important;
+  color: var(--ayclt-white) !important;
+}
+
+a { color: #ff5968; }
+a:hover, a:focus { color: #fff; }
+
+.navbar, .header, .sidebar, .card, .panel, .well,
+.list-group-item, .modal-content, .dropdown-menu,
+table, .table, .schedule-item, .song-list,
+.now-playing, .station-profile {
+  background-color: var(--ayclt-panel) !important;
+  color: var(--ayclt-white) !important;
+  border-color: var(--ayclt-border) !important;
+}
+
+.navbar, .header {
+  border-bottom: 2px solid var(--ayclt-red) !important;
+}
+
+.btn-primary, .button-primary, button[type="submit"] {
+  background: var(--ayclt-red) !important;
+  border-color: var(--ayclt-red) !important;
+  color: #fff !important;
+}
+.btn-primary:hover, .button-primary:hover {
+  background: var(--ayclt-red-dark) !important;
+  border-color: var(--ayclt-red-dark) !important;
+}
+
+.progress-bar, .progress-bar-primary { background: var(--ayclt-red) !important; }
+.text-muted, .help-block, .form-text { color: var(--ayclt-muted) !important; }
+hr { border-color: var(--ayclt-border) !important; }
+
+input, select, textarea {
+  background: #15171b !important;
+  color: #fff !important;
+  border-color: var(--ayclt-border) !important;
+}
+img { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+  .container, .container-fluid { padding-left: 12px; padding-right: 12px; }
+  .card, .panel { border-radius: 10px; }
+}
